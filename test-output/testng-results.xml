@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="1" ignored="2" total="3" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="16817" started-at="2018-08-22T13:39:17Z" finished-at="2018-08-22T13:39:34Z">
+  <suite name="Suite" duration-ms="8222" started-at="2018-08-22T13:44:39Z" finished-at="2018-08-22T13:44:47Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="16817" started-at="2018-08-22T13:39:17Z" finished-at="2018-08-22T13:39:34Z">
+    <test name="Test" duration-ms="8222" started-at="2018-08-22T13:44:39Z" finished-at="2018-08-22T13:44:47Z">
       <class name="com.epam.cleartrip.suitBase.BaseUtilityClearTrip">
-        <test-method status="PASS" signature="selectBrowser(java.lang.String)[pri:0, instance:com.epam.cleartrip.suitBase.BaseUtilityClearTrip@53b32d7]" name="selectBrowser" is-config="true" duration-ms="6812" started-at="2018-08-22T13:39:17Z" finished-at="2018-08-22T13:39:24Z">
+        <test-method status="PASS" signature="selectBrowser(java.lang.String)[pri:0, instance:com.epam.cleartrip.suitBase.BaseUtilityClearTrip@53b32d7]" name="selectBrowser" is-config="true" duration-ms="6604" started-at="2018-08-22T13:44:39Z" finished-at="2018-08-22T13:44:45Z">
           <params>
             <param index="0">
               <value>
@@ -18,13 +18,13 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- selectBrowser -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.epam.cleartrip.suitBase.BaseUtilityClearTrip@53b32d7]" name="tearDown" is-config="true" duration-ms="8239" started-at="2018-08-22T13:39:25Z" finished-at="2018-08-22T13:39:34Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.epam.cleartrip.suitBase.BaseUtilityClearTrip@53b32d7]" name="tearDown" is-config="true" duration-ms="7781" started-at="2018-08-22T13:44:47Z" finished-at="2018-08-22T13:44:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.epam.cleartrip.suitBase.BaseUtilityClearTrip -->
       <class name="com.epam.cleartrip.step.OneWayTripTest">
-        <test-method status="FAIL" signature="onewayTrip()[pri:0, instance:com.epam.cleartrip.step.OneWayTripTest@5442a311]" name="onewayTrip" duration-ms="1721" started-at="2018-08-22T13:39:24Z" finished-at="2018-08-22T13:39:25Z">
+        <test-method status="FAIL" signature="onewayTrip()[pri:0, instance:com.epam.cleartrip.step.OneWayTripTest@5442a311]" name="onewayTrip" duration-ms="1603" started-at="2018-08-22T13:44:45Z" finished-at="2018-08-22T13:44:47Z">
           <exception class="org.openqa.selenium.WebDriverException">
             <message>
               <![CDATA[unknown error: Element <select size="1" name="adults" id="Adults" tabindex="7" class="span span15">...</select> is not clickable at point (702, 414). Other element would receive the click: <span title="...uesday">T</span>
@@ -34,8 +34,8 @@ Command duration or timeout: 34 milliseconds
 Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
 System info: host: 'EPINPUNW0039', ip: '10.22.94.84', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{mobileEmulationEnabled=false, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:61236}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.41.578737 (49da6702b16031c40d63e5618de03a32ff6c197e), userDataDir=C:\Users\PRIYA_~1\AppData\Local\Temp\scoped_dir9808_29126}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, version=68.0.3440.106, browserConnectionEnabled=false, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 8852b8f8aa90bc741a1d59c585dd04bd]]>
+Capabilities [{mobileEmulationEnabled=false, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:61363}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.41.578737 (49da6702b16031c40d63e5618de03a32ff6c197e), userDataDir=C:\Users\PRIYA_~1\AppData\Local\Temp\scoped_dir10580_7746}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, version=68.0.3440.106, browserConnectionEnabled=false, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
+Session ID: ff3a41a5027fe5a06447a882d408144c]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.WebDriverException: unknown error: Element <select size="1" name="adults" id="Adults" tabindex="7" class="span span15">...</select> is not clickable at point (702, 414). Other element would receive the click: <span title="...uesday">T</span>
@@ -45,8 +45,8 @@ Command duration or timeout: 34 milliseconds
 Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
 System info: host: 'EPINPUNW0039', ip: '10.22.94.84', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{mobileEmulationEnabled=false, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:61236}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.41.578737 (49da6702b16031c40d63e5618de03a32ff6c197e), userDataDir=C:\Users\PRIYA_~1\AppData\Local\Temp\scoped_dir9808_29126}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, version=68.0.3440.106, browserConnectionEnabled=false, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 8852b8f8aa90bc741a1d59c585dd04bd
+Capabilities [{mobileEmulationEnabled=false, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:61363}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.41.578737 (49da6702b16031c40d63e5618de03a32ff6c197e), userDataDir=C:\Users\PRIYA_~1\AppData\Local\Temp\scoped_dir10580_7746}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, version=68.0.3440.106, browserConnectionEnabled=false, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
+Session ID: ff3a41a5027fe5a06447a882d408144c
 at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
 at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)

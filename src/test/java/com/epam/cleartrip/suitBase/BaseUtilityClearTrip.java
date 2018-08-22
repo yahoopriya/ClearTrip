@@ -9,6 +9,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
@@ -55,7 +56,7 @@ public class BaseUtilityClearTrip {
 		}
 	}
 
-	@AfterTest
+	@AfterSuite
 	public void tearDown() {
 
 		driver.manage().deleteAllCookies();
@@ -74,4 +75,6 @@ public class BaseUtilityClearTrip {
 		Select sl = new Select(element);
 		sl.selectByVisibleText(count);
 	}
+	
+	
 }

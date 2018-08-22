@@ -50,6 +50,7 @@ public class HomePage extends BaseUtilityClearTrip {
     public void selectDateOfJourney(){
     	
     	departdate.sendKeys(date);
+    	
     }
     
     public void selectAdult(){
@@ -66,5 +67,6 @@ public class HomePage extends BaseUtilityClearTrip {
     	
     	searchflightbutton.click();	
     }
+    
     
 }
