@@ -14,14 +14,16 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 
 public class BaseUtilityClearTrip {
-
-	private WebDriver driver = null;
+    
+	private static WebDriver driver = null;
 	public Actions act = null;
 
 	@Parameters({ "browserType" })
 	@BeforeTest
 	public void selectBrowser(String browserType) {
 
+		System.out.println(" i am i  select browser");
+		
 		switch (browserType) {
 
 		case "ff":
@@ -34,7 +36,7 @@ public class BaseUtilityClearTrip {
 
 		case "chrome":
 			System.setProperty("webdriver.chrome.driver", "D:\\E\\chromedriver_win32\\chromedriver.exe");
-			driver = new ChromeDriver();
+			 driver = new ChromeDriver();
 			driver.manage().window().maximize();
 			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 			driver.get("https://www.cleartrip.com/");

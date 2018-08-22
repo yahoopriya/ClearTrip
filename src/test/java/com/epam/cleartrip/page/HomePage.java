@@ -33,7 +33,7 @@ public class HomePage extends BaseUtilityClearTrip {
 	
 	public HomePage(WebDriver driver){
 		
-		PageFactory.initElements(driver, this);
+		PageFactory.initElements(getDriver(), this);
 	}
 	
 	

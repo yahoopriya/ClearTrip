@@ -5,7 +5,7 @@
   <test  name="Test">
     <classes>
       <class name="com.epam.cleartrip.suitBase.BaseUtilityClearTrip"/>
-       <class name="com.epam.cleartrip.step.OneWayTripTest"/> 
+      <class name=" com.epam.cleartrip.step.OneWayTripTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
