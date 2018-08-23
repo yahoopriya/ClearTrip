@@ -1,7 +1,13 @@
+/**
+ * 
+ */
 package com.epam.cleartrip.suitBase;
 
+import java.util.NoSuchElementException;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -16,7 +22,7 @@ import org.testng.annotations.Parameters;
 
 public class BaseUtilityClearTrip {
     
-	private static WebDriver driver = null;
+	protected static WebDriver driver = null;
 	public Actions act = null;
 
 	@Parameters({ "browserType" })
@@ -58,7 +64,6 @@ public class BaseUtilityClearTrip {
 
 	@AfterSuite
 	public void tearDown() {
-
 		driver.manage().deleteAllCookies();
 		driver.close();
 		driver.quit();
@@ -66,15 +71,47 @@ public class BaseUtilityClearTrip {
 	}
 
 	public WebDriver getDriver() {
-
 		return driver;
 	}
 	
-	public void selectAdultcountFJ(String count, WebElement element) {
-		
-		Select sl = new Select(element);
-		sl.selectByVisibleText(count);
+	/*public void selectAdultcountFJ(String count, WebElement element) {
+		Select select = new Select(element);
+		select.selectByVisibleText(count);
+	}*/
+	
+	/*public void scrollToElement() {
+		JavascriptExecutor javascriptobj = (JavascriptExecutor)driver;
+		javascriptobj.executeScript("scroll(0, 1000);");
+	}*/
+	
+	/*public void waitFor(long time) {	
+		try {
+			Thread.sleep(time);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+	}*/
+
+	public void safeJavaScriptClick(WebElement element) throws Exception {
+		try {
+			if (element.isEnabled() && element.isDisplayed()) {
+				System.out.println("Clicking on element with using java script click");
+
+				((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
+			} else {
+				System.out.println("Unable to click on element");
+			}
+		} catch (StaleElementReferenceException e) {
+			System.out.println("Element is not attached to the page document "+ e.getStackTrace());
+		} catch (NoSuchElementException e) {
+			System.out.println("Element was not found in DOM "+ e.getStackTrace());
+		} catch (Exception e) {
+			System.out.println("Unable to click on element "+ e.getStackTrace());
+		}
 	}
-	
-	
+   
+	/*public void checkBoxCheck(WebElement element) {
+		element.clear();
+		element.click();
+	}*/
 }

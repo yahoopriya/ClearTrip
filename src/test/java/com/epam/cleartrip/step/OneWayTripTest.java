@@ -20,7 +20,18 @@ public class OneWayTripTest extends BaseUtilityClearTrip {
 		 pageobj.selectDateOfJourney();
 		 pageobj .selectAdult();
 		 pageobj .selectadultCount();
-		 pageobj .searchFlight();	 
+		 pageobj .searchFlight();	
+		 pageobj.selectFirstFlight();
+		 pageobj.clickPolicyCheck();
+		 pageobj.continuePayment();
+		 pageobj.enterEmail();
+		 pageobj.ClickonContinue2();
+		// pageobj.selectTitle();
+		 pageobj.enterFirstName();
+		 pageobj.enterLastName();
+		 pageobj.enterMobileNo();
+		 pageobj.continueFinalPaymnt();
+		 
 	}
 
 }

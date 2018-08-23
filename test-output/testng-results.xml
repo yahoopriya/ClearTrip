@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testng-results skipped="0" failed="1" ignored="2" total="3" passed="0">
   <reporter-output>
+    <line>
+      <![CDATA[ element is enabled]]>
+    </line>
   </reporter-output>
-  <suite name="Suite" duration-ms="8222" started-at="2018-08-22T13:44:39Z" finished-at="2018-08-22T13:44:47Z">
+  <suite name="Suite" duration-ms="27557" started-at="2018-08-23T11:18:59Z" finished-at="2018-08-23T11:19:27Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="8222" started-at="2018-08-22T13:44:39Z" finished-at="2018-08-22T13:44:47Z">
+    <test name="Test" duration-ms="27557" started-at="2018-08-23T11:18:59Z" finished-at="2018-08-23T11:19:27Z">
       <class name="com.epam.cleartrip.suitBase.BaseUtilityClearTrip">
-        <test-method status="PASS" signature="selectBrowser(java.lang.String)[pri:0, instance:com.epam.cleartrip.suitBase.BaseUtilityClearTrip@53b32d7]" name="selectBrowser" is-config="true" duration-ms="6604" started-at="2018-08-22T13:44:39Z" finished-at="2018-08-22T13:44:45Z">
+        <test-method status="PASS" signature="selectBrowser(java.lang.String)[pri:0, instance:com.epam.cleartrip.suitBase.BaseUtilityClearTrip@4667ae56]" name="selectBrowser" is-config="true" duration-ms="6965" started-at="2018-08-23T11:18:59Z" finished-at="2018-08-23T11:19:06Z">
           <params>
             <param index="0">
               <value>
@@ -18,35 +21,35 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- selectBrowser -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.epam.cleartrip.suitBase.BaseUtilityClearTrip@53b32d7]" name="tearDown" is-config="true" duration-ms="7781" started-at="2018-08-22T13:44:47Z" finished-at="2018-08-22T13:44:55Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.epam.cleartrip.suitBase.BaseUtilityClearTrip@4667ae56]" name="tearDown" is-config="true" duration-ms="7847" started-at="2018-08-23T11:19:27Z" finished-at="2018-08-23T11:19:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.epam.cleartrip.suitBase.BaseUtilityClearTrip -->
       <class name="com.epam.cleartrip.step.OneWayTripTest">
-        <test-method status="FAIL" signature="onewayTrip()[pri:0, instance:com.epam.cleartrip.step.OneWayTripTest@5442a311]" name="onewayTrip" duration-ms="1603" started-at="2018-08-22T13:44:45Z" finished-at="2018-08-22T13:44:47Z">
-          <exception class="org.openqa.selenium.WebDriverException">
+        <test-method status="FAIL" signature="onewayTrip()[pri:0, instance:com.epam.cleartrip.step.OneWayTripTest@77cd7a0]" name="onewayTrip" duration-ms="20571" started-at="2018-08-23T11:19:06Z" finished-at="2018-08-23T11:19:27Z">
+          <exception class="org.openqa.selenium.InvalidElementStateException">
             <message>
-              <![CDATA[unknown error: Element <select size="1" name="adults" id="Adults" tabindex="7" class="span span15">...</select> is not clickable at point (702, 414). Other element would receive the click: <span title="...uesday">T</span>
+              <![CDATA[invalid element state: Element is not currently interactable and may not be manipulated
   (Session info: chrome=68.0.3440.106)
   (Driver info: chromedriver=2.41.578737 (49da6702b16031c40d63e5618de03a32ff6c197e),platform=Windows NT 10.0.16299 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 34 milliseconds
+Command duration or timeout: 24 milliseconds
 Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
 System info: host: 'EPINPUNW0039', ip: '10.22.94.84', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{mobileEmulationEnabled=false, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:61363}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.41.578737 (49da6702b16031c40d63e5618de03a32ff6c197e), userDataDir=C:\Users\PRIYA_~1\AppData\Local\Temp\scoped_dir10580_7746}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, version=68.0.3440.106, browserConnectionEnabled=false, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
-Session ID: ff3a41a5027fe5a06447a882d408144c]]>
+Capabilities [{mobileEmulationEnabled=false, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:55327}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.41.578737 (49da6702b16031c40d63e5618de03a32ff6c197e), userDataDir=C:\Users\PRIYA_~1\AppData\Local\Temp\scoped_dir14828_29136}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, version=68.0.3440.106, browserConnectionEnabled=false, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 72cc8bd45be9c9b3d671c657f1d513c3]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.WebDriverException: unknown error: Element <select size="1" name="adults" id="Adults" tabindex="7" class="span span15">...</select> is not clickable at point (702, 414). Other element would receive the click: <span title="...uesday">T</span>
+              <![CDATA[org.openqa.selenium.InvalidElementStateException: invalid element state: Element is not currently interactable and may not be manipulated
   (Session info: chrome=68.0.3440.106)
   (Driver info: chromedriver=2.41.578737 (49da6702b16031c40d63e5618de03a32ff6c197e),platform=Windows NT 10.0.16299 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 34 milliseconds
+Command duration or timeout: 24 milliseconds
 Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
 System info: host: 'EPINPUNW0039', ip: '10.22.94.84', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{mobileEmulationEnabled=false, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:61363}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.41.578737 (49da6702b16031c40d63e5618de03a32ff6c197e), userDataDir=C:\Users\PRIYA_~1\AppData\Local\Temp\scoped_dir10580_7746}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, version=68.0.3440.106, browserConnectionEnabled=false, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
-Session ID: ff3a41a5027fe5a06447a882d408144c
+Capabilities [{mobileEmulationEnabled=false, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:55327}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.41.578737 (49da6702b16031c40d63e5618de03a32ff6c197e), userDataDir=C:\Users\PRIYA_~1\AppData\Local\Temp\scoped_dir14828_29136}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, version=68.0.3440.106, browserConnectionEnabled=false, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 72cc8bd45be9c9b3d671c657f1d513c3
 at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
 at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
@@ -55,15 +58,16 @@ at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206
 at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
 at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
 at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:327)
-at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:85)
+at org.openqa.selenium.remote.RemoteWebElement.clear(RemoteWebElement.java:140)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 at java.lang.reflect.Method.invoke(Unknown Source)
 at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-at com.sun.proxy.$Proxy8.click(Unknown Source)
-at com.epam.cleartrip.page.HomePage.selectAdult(HomePage.java:57)
-at com.epam.cleartrip.step.OneWayTripTest.onewayTrip(OneWayTripTest.java:21)
+at com.sun.proxy.$Proxy8.clear(Unknown Source)
+at com.epam.cleartrip.suitBase.AbstractSuitSteps.insertText(AbstractSuitSteps.java:70)
+at com.epam.cleartrip.page.HomePage.enterFirstName(HomePage.java:150)
+at com.epam.cleartrip.step.OneWayTripTest.onewayTrip(OneWayTripTest.java:30)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -91,8 +95,11 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.WebDriverException -->
+          </exception> <!-- org.openqa.selenium.InvalidElementStateException -->
           <reporter-output>
+            <line>
+              <![CDATA[ element is enabled]]>
+            </line>
           </reporter-output>
         </test-method> <!-- onewayTrip -->
       </class> <!-- com.epam.cleartrip.step.OneWayTripTest -->
