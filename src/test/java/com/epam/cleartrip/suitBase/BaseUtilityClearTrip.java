@@ -14,16 +14,25 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.AfterSuite;
-import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
+
+import com.epam.cleartrip.utility.JsonDataReader;
 
 public class BaseUtilityClearTrip {
     
 	protected static WebDriver driver = null;
 	public Actions act = null;
+	
+	
+	@BeforeSuite
+	public void loadJsonData() {
+		
+		JsonDataReader jsonreader = new JsonDataReader();
+		
+	}
 
 	@Parameters({ "browserType" })
 	@BeforeTest

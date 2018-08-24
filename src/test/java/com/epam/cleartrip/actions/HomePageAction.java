@@ -1,25 +1,13 @@
-package com.epam.cleartrip.step;
+package com.epam.cleartrip.actions;
 
-import org.openqa.selenium.WebDriver;
-import org.testng.annotations.Test;
-
-import com.epam.cleartrip.actions.HomePageAction;
 import com.epam.cleartrip.page.HomePage;
 import com.epam.cleartrip.suitBase.BaseUtilityClearTrip;
 
-public class OneWayTripTest extends BaseUtilityClearTrip {
+public class HomePageAction extends BaseUtilityClearTrip {
+
 	
-	 WebDriver driver = null;
-	 
-	 
-	@Test
-	public void onewayTrip() {
-		
-		
-		HomePageAction homeactions = new HomePageAction();
-		homeactions.oneWayTripAction();
-		
-		/*
+	public void oneWayTripAction() {
+
 		HomePage pageobj = new HomePage(getDriver());
 		 pageobj .enterFromDest();
 		 pageobj .enterToLocation();
@@ -36,8 +24,7 @@ public class OneWayTripTest extends BaseUtilityClearTrip {
 		 pageobj.enterFirstName();
 		 pageobj.enterLastName();
 		 pageobj.enterMobileNo();
-		 pageobj.continueFinalPaymnt();*/
-		 
+		 pageobj.continueFinalPaymnt();
 	}
-
+	
 }
