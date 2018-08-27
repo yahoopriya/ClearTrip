@@ -1,30 +1,15 @@
 package com.epam.cleartrip.actions;
 
-import com.epam.cleartrip.page.HomePage;
-import com.epam.cleartrip.suitBase.BaseUtilityClearTrip;
+import com.epam.cleartrip.data.TripBooking;
+import com.epam.cleartrip.pages.HomePage;
+import com.epam.cleartrip.suitbase.BaseUtilityClearTrip;
 
 public class HomePageAction extends BaseUtilityClearTrip {
 
 	
-	public void oneWayTripAction() {
-
+	public boolean oneWayTrupBooking(TripBooking booking) {
 		HomePage pageobj = new HomePage(getDriver());
-		 pageobj .enterFromDest();
-		 pageobj .enterToLocation();
-		 pageobj.selectDateOfJourney();
-		 pageobj .selectAdult();
-		 pageobj .selectadultCount();
-		 pageobj .searchFlight();	
-		 pageobj.selectFirstFlight();
-		 pageobj.clickPolicyCheck();
-		 pageobj.continuePayment();
-		 pageobj.enterEmail();
-		 pageobj.ClickonContinue2();
-		 pageobj.selectTitle();
-		 pageobj.enterFirstName();
-		 pageobj.enterLastName();
-		 pageobj.enterMobileNo();
-		 pageobj.continueFinalPaymnt();
+		return pageobj.travelBooking(booking);		
 	}
 	
 }

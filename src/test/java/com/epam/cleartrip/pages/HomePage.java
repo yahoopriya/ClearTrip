@@ -1,14 +1,15 @@
-package com.epam.cleartrip.page;
+package com.epam.cleartrip.pages;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
-import org.testng.Reporter;
 
-import com.epam.cleartrip.suitBase.AbstractSuitSteps;
-import com.epam.cleartrip.suitBase.BaseUtilityClearTrip;
+import com.epam.cleartrip.data.TripBooking;
+import com.epam.cleartrip.suitbase.AbstractSuitSteps;
+import com.epam.cleartrip.suitbase.BaseUtilityClearTrip;
 
 public class HomePage extends BaseUtilityClearTrip {
 
@@ -39,6 +40,7 @@ public class HomePage extends BaseUtilityClearTrip {
 
 	// need to imlpement for dynamic date
 	@FindBy(how = How.XPATH, using = ".//*[@id='ui-datepicker-div']/div[1]/table/tbody/tr/td/a[text()='29']")
+	@CacheLookup
 	WebElement journeydate;
 
 	@FindBy(how = How.XPATH, using = ".//*[@id='flightForm']/section[2]/div/div/nav/ul/li[2]/preceding::button")
@@ -72,22 +74,18 @@ public class HomePage extends BaseUtilityClearTrip {
 	WebElement mobilenumber;
 	
 	public HomePage(WebDriver driver) {
-
 		PageFactory.initElements(getDriver(), this);
 	}
 
-	public void enterFromDest() {
-
+	public void enterFromDest(String fdest) {
 		fromdest.sendKeys(fdest);
 	}
 
-	public void enterToLocation() {
-
+	public void enterToLocation(String tolocation) {
 		todest.sendKeys(tolocation);
 	}
 
-	public void selectDateOfJourney() {
-
+	public void selectDateOfJourney(String date) {
 		departdate.sendKeys(date);
 		journeydate.click();
 	}
@@ -98,7 +96,6 @@ public class HomePage extends BaseUtilityClearTrip {
 	}
 
 	public void selectadultCount() {
-
 		AbstractSuitSteps.selectOptions(adultCount, select_adult);
 	}
 
@@ -119,7 +116,6 @@ public class HomePage extends BaseUtilityClearTrip {
 	}
 
 	public void continuePayment() {
-
 		AbstractSuitSteps.scrollToElement();
 		AbstractSuitSteps.waitFor(500);
 		continue_To_Payment.click();
@@ -132,35 +128,55 @@ public class HomePage extends BaseUtilityClearTrip {
 	    }
     }
 	
-	public void enterEmail() {
-		 AbstractSuitSteps.insertText(emailId, useremailid);	
+	public void enterEmail(String usermailid) {
+		 AbstractSuitSteps.insertText(emailId, usermailid);	
 		}
 	
 	public void ClickonContinue2() {
 		AbstractSuitSteps.clickOnBtton(continuewithemail);
 	}
 	
-	public void selectTitle() {
+	public void selectTitle(String title) {
 		AbstractSuitSteps.waitFor(1000);
 		AbstractSuitSteps.selectOptions(title, selectTitle);
 	}
 	
-	public void enterFirstName() {
+	public void enterFirstName(String uName) {
 		AbstractSuitSteps.waitFor(1000);
 		 AbstractSuitSteps.insertText(firstName,uName);
 	}
 	
-	public void enterLastName() {
+	public void enterLastName(String uLastName) {
 		AbstractSuitSteps.waitFor(500);
 		 AbstractSuitSteps.insertText(lastName,uLastName);
 	}
 	
-	public void enterMobileNo() {
+	public void enterMobileNo(String umobileNo) {
 		AbstractSuitSteps.waitFor(500);
 		 AbstractSuitSteps.insertText(mobilenumber,umobileNo);
 	}
 	
 	public void continueFinalPaymnt() {
 		AbstractSuitSteps.clickOnBtton(continuewithemail);
+	}
+	
+	public boolean travelBooking(TripBooking booking) {
+		 enterFromDest(booking.getFdest());
+		 enterToLocation(booking.getTolocation());
+		 selectDateOfJourney(booking.getDate());
+		 selectAdult();
+		 selectadultCount();
+		 searchFlight();	
+		 selectFirstFlight();
+		 clickPolicyCheck();
+		 continuePayment();
+		 enterEmail(booking.getUseremailid());
+		 ClickonContinue2();
+		 selectTitle(booking.getTitle());
+		 enterFirstName(booking.getuName());
+		 enterLastName(booking.getuLastName());
+		 enterMobileNo(booking.getUmobileNo());
+		 continueFinalPaymnt();
+		 return true;
 	}
   }

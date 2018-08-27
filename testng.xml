@@ -4,8 +4,8 @@
 <parameter name="browserType" value="chrome"></parameter>
   <test  name="Test">
     <classes>
-      <class name="com.epam.cleartrip.suitBase.BaseUtilityClearTrip"/>
-       <class name="com.epam.cleartrip.step.OneWayTripTest"/> 
+      <class name="com.epam.cleartrip.suitbase.BaseUtilityClearTrip"/>
+       <class name="com.epam.cleartrip.steps.OneWayTripTest"/> 
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

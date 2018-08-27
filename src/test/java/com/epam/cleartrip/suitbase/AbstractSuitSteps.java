@@ -1,11 +1,19 @@
-package com.epam.cleartrip.suitBase;
+package com.epam.cleartrip.suitbase;
 
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import javax.imageio.ImageIO;
+
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -74,5 +82,15 @@ public class AbstractSuitSteps extends BaseUtilityClearTrip {
 	public static void selectOptions(String count, WebElement element) {
 		Select select = new Select(element);
 		select.selectByVisibleText(count);
+	}
+	
+	public static void fluintWait(WebElement element) throws IOException {
+		Actions action = new Actions(driver);
+		TakesScreenshot screenShot = (TakesScreenshot) driver;
+		File s = screenShot.getScreenshotAs(OutputType.FILE);
+		BufferedImage image = ImageIO.read(s);
+		
+		Select select = new Select(element);
+		
 	}
 }

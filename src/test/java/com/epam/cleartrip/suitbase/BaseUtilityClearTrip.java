@@ -1,8 +1,11 @@
 /**
  * 
  */
-package com.epam.cleartrip.suitBase;
+package com.epam.cleartrip.suitbase;
 
+import static org.testng.Assert.assertEquals;
+
+import java.io.IOException;
 import java.util.NoSuchElementException;
 import java.util.concurrent.TimeUnit;
 
@@ -14,35 +17,42 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.testng.Assert;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 
 import com.epam.cleartrip.utility.JsonDataReader;
+import com.epam.cleartrip.utility.PropertyFileReader;
+import com.epam.cleartrip.utility.RestUtil;
+
+import cucumber.api.java.Before;
 
 public class BaseUtilityClearTrip {
     
 	protected static WebDriver driver = null;
 	public Actions act = null;
-	
+	public static JsonDataReader jsonreader = null;
+	public static PropertyFileReader propertyloader = null;
+	public static RestUtil restutil = null;
 	
 	@BeforeSuite
-	public void loadJsonData() {
-		
-		JsonDataReader jsonreader = new JsonDataReader();
-		
+	public static void loadJsonData() throws IOException {		
+		 new JsonDataReader().loadDatafromjson();	
+		  propertyloader = new PropertyFileReader();
+		  propertyloader.propertyFileLoader();
+		  restutil = new RestUtil();
 	}
-
+	
+  
+	   
 	@Parameters({ "browserType" })
-	@BeforeTest
-	public void selectBrowser(String browserType) {
-
-		System.out.println(" i am i  select browser");
-		
+	@BeforeTest	
+	public void selectBrowser(String browserType) {		
 		switch (browserType) {
-
-		case "ff":
+		
+		case "firefox":
 			driver = new FirefoxDriver();
 			driver.manage().window().maximize();
 			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
@@ -55,7 +65,8 @@ public class BaseUtilityClearTrip {
 			 driver = new ChromeDriver();
 			driver.manage().window().maximize();
 			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-			driver.get("https://www.cleartrip.com/");
+			driver.get(propertyloader.property.getProperty("URL"));
+			Assert.assertEquals(restutil.verifyresponse(), 200);
 			act = new Actions(driver);
 			break;
 
